@@ -1,13 +1,13 @@
 import { ApolloServer } from '@apollo/server'
 import { startStandaloneServer } from '@apollo/server/standalone'
-import { typeDefs } from './schema'
-import data from './data'
+import { authors, games, reviews } from './db/index.js'
+import { typeDefs } from './schema/index.js'
 
 const resolvers = {
   Query: {
-    games: () => data.games,
-    authors: () => data.authors,
-    reviews: () => data.reviews,
+    games: () => games,
+    authors: () => authors,
+    reviews: () => reviews,
   },
 }
 
@@ -20,4 +20,4 @@ const { url } = await startStandaloneServer(server, {
   listen: { port: 4000 },
 })
 
-console.log('Server ready at port, ', 4000)
+console.log('Server ready at port, ', url)

@@ -1,4 +1,4 @@
-let games = [
+export let games = [
   { id: '1', title: 'Zelda: Tears of the Kingdom', platform: ['Switch'] },
   { id: '2', title: 'Final Fantasy VII Remake', platform: ['PS5', 'Xbox'] },
   { id: '3', title: 'Elden Ring', platform: ['PS5', 'Xbox', 'PC'] },
@@ -6,13 +6,13 @@ let games = [
   { id: '5', title: 'Pokemon Scarlet', platform: ['PS5', 'Xbox', 'PC'] },
 ]
 
-let authors = [
+export let authors = [
   { id: '1', name: 'Mario', verified: true },
   { id: '2', name: 'Yoshi', verified: false },
   { id: '3', name: 'Peach', verified: true },
 ]
 
-let reviews = [
+export let reviews = [
   {
     id: '1',
     rating: 9,
@@ -70,5 +70,3 @@ let reviews = [
     game_id: '1',
   },
 ]
-
-export default { games, authors, reviews }
